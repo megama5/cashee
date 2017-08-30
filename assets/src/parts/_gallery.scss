@@ -1,0 +1,57 @@
+.gallery{
+	background-color: $yellow;
+	&__container{
+		@extend .row-container-col;
+		padding-top: rem(100);
+		padding-bottom: rem(90);
+	}
+	&__wrap{
+		@extend .row-container;
+		margin-bottom: rem(30);
+		&--vertical{
+			flex-direction: column;
+			align-items: center;
+		}
+		&--btn{
+			@include col(12);
+			justify-content: center;
+		}
+	}
+	&__img-side-wrap{
+		@include col(4);
+		justify-content: space-between;
+		margin-bottom: 0;
+
+	}
+	&__title{
+		@include section-title($black, $title-global-font-size, $title-global-font-weight);
+		@include col(4);
+		text-align: center;
+	}
+	&__title-text{
+		@extend .about__text;
+		@include col(6);
+		text-align: center;
+		color: $black;
+		padding-bottom: rem(16);
+	}
+	
+	&__img-wrap{
+		font-size: 0;
+		&--01{
+			@include col(8);
+		}
+		&--04, &--05{
+			@include col(6);
+		}
+	}
+	&__img{
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+	}
+	&__btn{
+		@include btn($color-02);
+	}
+	
+}

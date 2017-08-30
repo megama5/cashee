@@ -1,0 +1,19 @@
+.footer{
+	background-color: $black;
+	&__container{
+		@extend .row-container;
+		justify-content: space-between;
+		align-items:center;
+		padding: rem(32) 0 rem(31) 0;
+	}
+	&__side-block{
+		@include col(3);
+		@include section-text($white-01, rem(16), 300, 0);
+	}
+	&__main-block{
+		@include col(2)
+	}
+	&__inner-text{
+		@include section-text($red-01, rem(16), 700, 0);
+	}
+}

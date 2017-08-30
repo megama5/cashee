@@ -1,0 +1,46 @@
+*{
+	box-sizing: border-box;
+	color: $black;
+	font-family: $base-font-family;
+	line-height: $base-line-height;
+}
+
+a{
+	text-decoration: none;
+	&:hover{
+		color:$black;
+	}
+}
+
+.flex{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.flex-col{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.container{
+	max-width: rem(1200);
+	width: 100%;
+	margin: 0 auto;
+}
+
+.row{
+	width: 100%;
+	@extend .flex;
+}
+
+.row-container{
+	@extend .container;
+	@extend .flex;
+}
+
+.row-container-col{
+	@extend .container;
+	@extend .flex-col;
+}

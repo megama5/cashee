@@ -1,0 +1,43 @@
+/*--------------grid---------------*/
+// sell left and right gup
+$gup: rem(15) ;
+
+
+/*--------------Fonts---------------*/
+$base-line-height: 1.3;
+$base-font-family: 'Raleway', sans-serif !important; // !important to override reset.css sselector specificity
+
+$title-global-font-size: rem(90);
+$title-global-font-weight: 700;
+
+$text-global-fs: rem(17);
+$text-global-sw: 300;
+
+
+
+/*--------------colors---------------*/
+$black: #262626;
+$white: #ffffff;
+$white-01: #b9b9b9; // footer text
+$orange: #ff6033; // active nav link
+$blue: #70bfff; // section services
+$yellow: #ffe92f;
+$green: #96b92c;
+$purple: #b07cf7;
+$red: #f72b3b;
+$red-01: #ff2b58; // footer love
+$color-01: #00c4c4; // section about background
+$color-02: #5585a2; // gallery btn
+$color-03: #00c4c4; // inputs in contact form
+$color-04: #355b82; // aactive input;
+$color-05: #262626; // footer bg
+
+
+
+
+/*--------------button---------------*/
+$btn-height: rem(55);
+$btn-fsize: rem(20);
+$btn-fweight: 300;
+$btn-lheight: $btn-height;
+

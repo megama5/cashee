@@ -1,0 +1,20 @@
+.subscribe{
+	background: url('../img/subscribe-bg.png') no-repeat center $white;
+	&__container{
+		@extend .row-container-col;
+		padding-top: rem(145);
+		padding-bottom: rem(160);
+	}
+	&__title-wrap{
+		@include col(6);
+	}
+	&__title{
+		@include section-title($black, rem(40), 700);
+	}
+	&__title-text{
+		@include section-text($black, rem(17), 300, rem(30));
+	}
+	&__form{
+		@include col(8);	
+	}
+}

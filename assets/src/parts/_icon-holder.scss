@@ -1,0 +1,14 @@
+// icon width and height. They are the same
+$wh: rem(54);
+
+.icon-holder{
+	padding-right: rem(120);
+	position: relative;
+	&__icon{
+		position: absolute;
+		width: $wh;
+		height: $wh;
+		top: calc( 50% - #{$wh} / 2);
+		right: rem(23);
+	}
+}

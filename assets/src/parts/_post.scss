@@ -1,0 +1,33 @@
+.post{
+	@extend .flex-col;
+	position: relative;
+	justify-content: flex-end;
+
+	&__icon{
+		position: absolute;
+		top: rem(40);
+		left: rem(42);
+		width: rem(60);
+		height: rem(60);
+		border-radius: rem(5);
+		background-color: $black;
+		opacity: 0.5;
+		@include section-text($white, rem(32), 700,0);
+		text-align: center;
+		line-height: rem(23);
+    padding-top: rem(5);
+		&--subtext{
+			@include section-text($white, rem(21), 800,0);
+			text-transform: uppercase;
+		}
+	}
+	&__text-wrap{
+		padding: rem(20);
+	}
+	&__text{
+		@include section-text($white, rem(20), 700, rem(25));
+	}
+	&__subtext{
+		@include section-text($white, rem(13), 300, 0);	
+	}
+}

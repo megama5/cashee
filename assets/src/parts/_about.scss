@@ -1,0 +1,22 @@
+.about{
+	background-color: $color-01;
+	&__container{
+		min-height: rem(664);
+		padding-top: rem(34);
+		@extend .row-container;	
+		justify-content: flex-end;
+		align-items: center;
+		background: url('../img/raspberries.png') no-repeat 0 50%;
+		
+	}
+	&__info-wrap{
+		@include col(5);
+	}
+	&__title{
+		@include section-title($white, $title-global-font-size, $title-global-font-weight);
+	}
+	&__text{
+		@include section-text($white, $text-global-fs, $text-global-sw, rem(20));
+	}
+
+}

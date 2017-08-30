@@ -1,0 +1,76 @@
+.contact{
+	background: url('../img/contact-bg.jpg') no-repeat center;
+	background-size: cover;
+	padding: rem(100) 0 rem(90) 0;
+	&__container{
+		@extend .blog__container;
+	}
+	&__title-wrap{
+		@extend .blog__title-wrap;
+		@include col(4);
+	}
+	&__title{
+		@extend .blog__title;	
+		color: $black;
+	}
+	&__title-text{
+		margin-bottom: rem(46);
+	}
+	&__info-wrap{
+		@extend .flex;
+		justify-content: space-between;
+	}
+	&__form{
+		@include col(5);
+	}
+	&__form-input, &__form-textarea{
+		width: 100%;
+		height: rem(50);
+		background-color: $color-03;
+		opacity: 0.5;
+		border: none;
+		margin-bottom: rem(15);
+		padding: 0 rem(20);
+		transition: all .3s ease;
+		&::placeholder{
+			@include section-text($white, rem(15), 700, 0);
+		}
+		&:focus{
+			outline: none;
+			opacity: 1;
+			& + .contact__input-marker:before{
+				content: '';
+				display: block;
+				position: absolute;
+				height: calc( 100% - #{rem(15)} );
+				width: rem(5);
+				top: 0;
+				left: 0;
+				background-color: $color-04;
+			}
+		}
+	}
+	&__form-textarea{
+		height: auto;
+	}
+	&__block-wrap{
+		position: relative;
+		font-size: 0;
+	}
+	&__form-label{
+		position: absolute;
+		top: 0;
+		left: 0;
+		visibility: hidden;
+		font-size: 0;
+	}
+	&__info{
+		@include col(5);	
+	}
+	&__info-title{
+		@include section-text($black, rem(17), 700, 0);
+	}
+	&__info-text{
+		@include section-text($black, rem(20), 300, rem(20));	
+	}
+}

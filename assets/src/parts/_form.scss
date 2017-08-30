@@ -1,0 +1,36 @@
+.form{
+	@extend .flex;
+  justify-content: space-between;
+	position: relative;
+	&__input-label{
+		position: absolute;
+		top: 0;
+		left: 0;
+		visibility: hidden;
+		font-size: 0;
+	}
+	&__input{
+		display: inline-block;
+    width: 74.6%;
+    height: 55px;
+    border: 1px solid $black;
+    padding: 0 $gup;
+    &::placeholder{
+    	@include section-title($black, rem(17), 300, 0);
+    	text-transform: none;
+    }
+    &:focus{
+    	outline: none;
+    }
+	}
+	&__submit{
+		@include btn($green);
+		border: none;
+		&:focus{
+	    outline: none;	
+		}
+		&:active{
+			border: none;
+		}
+	}
+}

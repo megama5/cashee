@@ -1,0 +1,25 @@
+@import 'settings/functions';
+@import 'settings/variables';
+@import 'settings/mixins';
+
+@import 'settings/reset';
+@import 'settings/fonts';
+@import 'settings/general';
+
+//parts
+@import 'parts/nav-bar';
+@import 'parts/hero';
+@import 'parts/about';
+@import 'parts/services';
+@import 'parts/icon-holder';
+@import 'parts/gallery.scss';
+@import 'parts/subscribe';
+@import 'parts/form';
+@import 'parts/blog';
+@import 'parts/post';
+@import 'parts/contact';
+@import 'parts/footer';
+
+
+
+
