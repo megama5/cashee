@@ -4,18 +4,25 @@
 	<meta charset="UTF-8">
 	<title>Cahee</title>
 	<meta name="description" content="Plane cahee beautiful page">
-
 	<link rel="stylesheet" href="assets/dist/style.css">
+	<script src="assets/plugin/jquery/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 	<header class="nav-bar hero">
 		<div class="nav-bar__container">
 			<a href="#" class="nav-bar__logo-wraper">
 				<object class="nav-bar__logo" data="assets/img/logo.svg" type="image/svg+xml">Logo</object>
-				<!-- <img src="assets/img/logo.svg" alt="" class="nav-bar__logo"> -->
 			</a>
 			<!-- .nav-bar__logo-wraper -->
 			<nav class="nav-bar__nav-wrapper">
+				<div class="hamburger">
+			    <h2 class="hamburger__title">MENU</h2>
+			    <ul class="hamburger__menu">
+			      <li class="hamburger__menu-first"></li>
+			      <li class="hamburger__menu-second"></li>
+			      <li class="hamburger__menu-third"></li>
+			    </ul>
+			  </div>
 				<ul class="nav-bar__list">
 					<li class="nav-bar__list-item nav-bar__list-item--active">
 						<a href="#" class="nav-bar__link">home</a>
@@ -324,5 +331,19 @@
 			</p>
 		</div>
 	</footer>
+
+	<script type="text/javascript">
+	(function($){
+
+		document.addEventListener('DOMContentLoaded',function(event){
+			$('.hamburger').on('click', function(){
+  		  $(this).toggleClass('checked');
+  		  $(this).next().toggleClass('nav-bar__list--active');
+			});
+		});
+
+	})(jQuery);
+
+	</script>
 </body>
 </html>

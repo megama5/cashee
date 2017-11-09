@@ -1,7 +1,9 @@
 .contact{
+	@extend .min-width;
 	background: url('../img/contact-bg.jpg') no-repeat center;
 	background-size: cover;
 	padding: rem(100) 0 rem(90) 0;
+	@include transition();
 	&__container{
 		@extend .blog__container;
 	}
@@ -72,5 +74,17 @@
 	}
 	&__info-text{
 		@include section-text($black, rem(20), 300, rem(20));	
+	}
+
+	@media all and (max-width: $bp-7) {
+		&__title-wrap{
+			@include col(12);	
+		}
+		&__info-wrap{
+			flex-direction: column-reverse;
+		}
+		&__form, &__info{
+			@include col(12);	
+		}
 	}
 }

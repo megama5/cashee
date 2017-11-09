@@ -2,17 +2,23 @@ $scrol-img-width: rem(24);
 $scrol-img-height: rem(40);
 
 .hero{
+	@extend .min-width;
 	height: 100vh;
 	background: url('../img/hero-bg.png') no-repeat 50% 0% #f8f7fa;
 	position: relative;
-	// background-size: cover;
 	&__container{
 		@extend .row-container-col;
-
 	}
 	&__info-wrap{
-		@include col(4);
-		padding-top: 20vh;
+		transition: all .3s ease;
+		@media  all and (min-width: $bp-7) {
+			@include col(4);
+			padding-top: 20vh;
+		}
+		@media all and (max-width: $bp-7) {
+			padding-top: 0 ;
+    	@include col(12);
+		}
 	}
 	&__title{
 		@include section-title($black, rem(60), 800);

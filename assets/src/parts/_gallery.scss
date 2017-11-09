@@ -1,5 +1,7 @@
 .gallery{
+	@extend .min-width;
 	background-color: $yellow;
+	@include transition();
 	&__container{
 		@extend .row-container-col;
 		padding-top: rem(100);
@@ -25,7 +27,7 @@
 	}
 	&__title{
 		@include section-title($black, $title-global-font-size, $title-global-font-weight);
-		@include col(4);
+		@include col(12);
 		text-align: center;
 	}
 	&__title-text{
@@ -38,6 +40,7 @@
 	
 	&__img-wrap{
 		font-size: 0;
+		width: 100%;
 		&--01{
 			@include col(8);
 		}
@@ -54,4 +57,21 @@
 		@include btn($color-02);
 	}
 	
+	@media all and (max-width: $bp-7) {
+		&__title-text{
+			@include col(9.6);
+		}
+		&__wrap{
+			flex-direction: column;
+    	align-items: center;
+		}
+		&__img-wrap{
+
+			&--04,&--05{
+				@include col(12);
+				margin-bottom: rem(40);
+			}
+		}
+
+	}
 }

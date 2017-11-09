@@ -1,0 +1,54 @@
+.hamburger{
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+  text-align: right;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  &.checked{
+      .hamburger__menu-first{
+        transform: rotate( -135deg ) translateY( rem(-8.5) );
+      }
+      .hamburger__menu-second{
+        opacity: 0;
+      }
+      .hamburger__menu-third{
+        transform: rotate( 135deg ) translateY( rem(8.5) );
+      }
+    }
+  &__title{
+    display: inline-block;
+    letter-spacing: rem(3);
+    font-family: "Raleway", sans-serif !important;
+  }
+  &__menu{
+    width: rem(42);
+    height: rem(21);
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    position: relative;
+    top: rem(2);
+    left: rem(10);
+    transition: all 233ms cubic-bezier(0.5, 0, 0, 1);
+    
+  }
+  li{
+    width: rem(24);
+    height: rem(4);
+    background: #000;
+    margin: rem(2) 0 0;
+    padding: 0;
+    transform: translate3d(0, 0, 0);
+    transition: all 333ms cubic-bezier(0.5, 0, 0, 1);
+  }
+
+  //media
+  @media all and (min-width: rem(786)) {
+    display: none;
+  }
+}
