@@ -12,6 +12,10 @@ a{
 	}
 }
 
+.min-width{
+	min-width: rem(400);
+}
+
 .flex{
 	display: flex;
 	width: 100%;
@@ -25,6 +29,7 @@ a{
 }
 
 .container{
+	@extend .min-width;
 	max-width: rem(1200);
 	width: 100%;
 	margin: 0 auto;

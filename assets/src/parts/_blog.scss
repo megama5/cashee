@@ -1,7 +1,9 @@
 .blog{
+	@extend .min-width; 
 	background-color: $purple;
 	padding-top: rem(100);
 	padding-bottom: rem(90);
+	@include transition();
 	&__container{
 		@extend .row-container-col;
 		align-items: center;
@@ -26,7 +28,6 @@
 		height: rem(310);
 		background-position: center;
 		background-repeat: no-repeat;
-		// box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 		&--01{
 			background-image: url('../img/blog-img-01.png');
 		}
@@ -44,5 +45,24 @@
 	}
 	&__btn{
 		@include btn($red);
+	}
+	@media all and (max-width: $bp-7) {
+		padding-top: rem(15);
+		padding-bottom: rem(15);
+		&__title-wrap{
+			@include col(12);
+		}
+		&__post-wrap{
+	    flex-direction: column;
+    	align-items: center;
+		}
+		&__post{
+			max-width: 50%;
+		}
+	}
+	@media all and (max-width: rem(480)){
+		&__post{
+			max-width: 90%;
+		}
 	}
 }

@@ -1,5 +1,7 @@
 .services{
+	@extend .min-width;
 	background-color: $blue;
+	@include transition();
 	&__container{
 		@extend .row-container;
 		flex-direction: row-reverse;
@@ -43,5 +45,18 @@
 	&__subtitle{
 		@include section-text($black, rem(20), 700, 0);	
 		padding: 0 rem(15);
+	}
+
+	@media all and (max-width: $bp-7) {
+		&__container{
+			flex-direction: column;
+		}
+		&__title{
+			@include col(12);
+    	text-align: center;
+		}
+		&__list{
+			@include col(12);
+		}
 	}
 }

@@ -1,3 +1,5 @@
+$relativeMenuItemsPading: 20;
+
 .nav-bar{
 	&__container{
 		@extend .row-container;
@@ -7,26 +9,59 @@
 	&__logo-wraper{
 		@include col(2);
 	}
+	//right panel with menus
 	&__nav-wrapper{
-		@include col(10);	
+		@include col(10);
+		@media all and (max-width: $bp-7) {
+			position: relative;
+		}
 	}
 	&__list{
 		@extend .flex;
 		justify-content: flex-end;
+
+		@media all and (max-width: $bp-7) {
+			display: none;
+			&--active{
+				position: absolute;
+				top: rem(50);
+				right: rem(30);
+				display: block;
+				max-width: rem(230);
+				text-align: right;
+				background-color: white;
+    		border-radius: rem(30);
+    		padding: rem(30);
+    		box-shadow: 0 0 rem(20);
+			}
+			&-item{
+				position: relative;
+				padding-bottom: rem($relativeMenuItemsPading);
+				&--active{
+					@include active-link( calc( 100% - #{rem($relativeMenuItemsPading)} / 1.5));
+				}
+				&:hover{
+					@include active-link( calc( 100% - #{rem($relativeMenuItemsPading)} / 1.5));
+				}
+			}
+		}
+		@media all and (min-width: $bp-7) {
+			&-item{
+				margin-right: rem(35);
+				position: relative;
+				&:last-child{
+					margin-right:0;
+				}
+				&--active{
+				@include active-link();
+				}
+				&:hover{
+					@include active-link();
+				}
+			}
+		}
 	}
-	&__list-item{
-		margin-right: rem(35);
-		position: relative;
-		&:last-child{
-			margin-right:0;
-		}
-		&--active{
-			@include active-link();
-		}
-		&:hover{
-			@include active-link();
-		}
-	}
+
 	&__link{
 		font-size: 16px;
 		font-weight: 700;

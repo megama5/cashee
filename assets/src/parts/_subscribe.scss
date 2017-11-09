@@ -1,5 +1,7 @@
 .subscribe{
+	@extend .min-width;
 	background: url('../img/subscribe-bg.png') no-repeat center $white;
+	@include transition();
 	&__container{
 		@extend .row-container-col;
 		padding-top: rem(145);
@@ -16,5 +18,18 @@
 	}
 	&__form{
 		@include col(8);	
+	}
+
+	@media all and (max-width: $bp-7) {
+		&__container{
+			padding-top: rem(10);
+			padding-bottom: rem(10);
+		}
+		&__title-wrap{
+			@include col(11);
+		}
+		&__title{
+
+		}
 	}
 }
