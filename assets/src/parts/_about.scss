@@ -24,12 +24,23 @@
 		@include section-text($white, $text-global-fs, $text-global-sw, rem(20));
 	}
 
-	@media all and (max-width: $bp-7) {
+	@media screen and (max-width: $bp-7) {
 		&__container{
 			align-items: flex-start;
+			min-height: rem(364);
+			padding-top: rem(40);
+			padding-bottom: rem(40);
 		}	
 		&__info-wrap{
 			@include col(12);
+		}
+		&__title{
+			text-align: center;
+		}
+	}
+	@media screen and (max-width: rem(1024)) {
+		&__title,&__text{
+			color:$black;
 		}
 	}
 }

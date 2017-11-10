@@ -29,7 +29,7 @@ a{
 }
 
 .container{
-	@extend .min-width;
+	// @extend .min-width;
 	max-width: rem(1200);
 	width: 100%;
 	margin: 0 auto;
